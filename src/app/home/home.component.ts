@@ -27,7 +27,14 @@ export class HomeComponent implements OnInit {
   }
 
   searchByTitle(val){
-    this.items = this.photos.items.filter(res => res.title === val);    
+    if(val){
+      this.items = this.photos.items.filter(res => res.title === val);
+    }
+    else{
+      this.items = this.photos.items;
+    }
+    
+        
   }
 
 }

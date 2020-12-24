@@ -10,6 +10,7 @@ import { StoreModule } from "@ngrx/store";
 import { reducer } from './store/reducer';
 import { ShopEffects } from './store/effects';
 import { EffectsModule } from '@ngrx/effects';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     StoreModule.forRoot({photo: reducer}),
     EffectsModule.forRoot([ShopEffects])
   ],
