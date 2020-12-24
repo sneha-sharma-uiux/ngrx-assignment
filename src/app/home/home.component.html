@@ -1,0 +1,10 @@
+<main>
+  <form>
+    <input type="text" placeholder="Search by title" name="search" #search>
+    <button type="submit" (click)="searchByTitle(search.value)">Search</button>
+</form>
+    <section class="product-area">
+      
+        <app-data-list [Photos]="items"></app-data-list>
+      </section>
+</main>
